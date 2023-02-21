@@ -9,24 +9,24 @@
       "value": "Standard_B2s"
     },
     "virtualMachineName": {
-      "value": "OPNsense"
+      "value": "OPNsense_2"
     },
     "virtualNetworkName": {
-      "value": "OPN-VNET"
+      "value": "OPN_2-VNET"
     },
     "existingvirtualNetwork" :{
       "value": "new"
     },
     "VNETAddress": {
       "value": [
-        "10.0.0.0/16"
+        "10.10.0.0/16"
       ]
     },
     "UntrustedSubnetCIDR": {
-      "value": "10.0.0.0/24"
+      "value": "10.10.0.0/24"
     },
     "TrustedSubnetCIDR": {
-      "value": "10.0.1.0/24"
+      "value": "10.10.1.0/24"
     },
     "existingUntrustedSubnetName": {
       "value": "Untrusted-Subnet"
@@ -47,7 +47,7 @@
       "value": false
     },
     "DeployWindowsSubnet": {
-      "value": "10.0.2.0/24"
+      "value": "10.10.2.0/24"
     },
     "existingWindowsSubnet": {
       "value": "Windows-VM-Subnet"
