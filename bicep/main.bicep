@@ -10,25 +10,25 @@ param scenarioOption string = 'TwoNics'
 @sys.description('VM size, please choose a size which allow 2 NICs.')
 param virtualMachineSize string = 'Standard_B2s'
 
-@sys.description('OPN NVA Manchine Name')
+@sys.description('OPN NVA Machine Name')
 param virtualMachineName string
 
 @sys.description('Virtual Nework Name. This is a required parameter to build a new VNet or find an existing one.')
-param virtualNetworkName string = 'OPN-VNET'
+param virtualNetworkName string = 'OPN-VNET-2'
 
 @sys.description('Use Existing Virtual Nework. The value must be new or existing.')
 param existingvirtualNetwork string = 'new'
 
 @sys.description('Virtual Network Address Space. Only required if you want to create a new VNet.')
 param VNETAddress array = [
-  '10.0.0.0/16'
+  '10.10.0.0/16'
 ]
 
 @sys.description('Untrusted-Subnet Address Space. Only required if you want to create a new VNet.')
-param UntrustedSubnetCIDR string = '10.0.0.0/24'
+param UntrustedSubnetCIDR string = '10.10.0.0/24'
 
 @sys.description('Trusted-Subnet Address Space. Only required if you want to create a new VNet.')
-param TrustedSubnetCIDR string = '10.0.1.0/24'
+param TrustedSubnetCIDR string = '10.10.1.0/24'
 
 @sys.description('Untrusted-Subnet Name. Only required if you want to use an existing VNet and Subnet.')
 param existingUntrustedSubnetName string = ''
@@ -66,7 +66,7 @@ param WinPassword string = ''
 param existingWindowsSubnet string = ''
 
 @sys.description('In case of deploying Windows in a New VNet this will be the Windows VM Subnet Address Space')
-param DeployWindowsSubnet string = '10.0.2.0/24'
+param DeployWindowsSubnet string = '10.10.2.0/24'
 
 param Location string = resourceGroup().location
 
